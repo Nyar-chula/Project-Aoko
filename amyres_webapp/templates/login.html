@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}">
+</head>
+<body>
+    <div class="homepage">
+        <div class="form-container">
+            <h2>Login</h2>
+            <form action="{% url 'login' %}" method="post"> <!-- Adjust action URL as needed -->
+                {% csrf_token %}
+                {{ form.as_p }} <!-- Renders form fields with Django styling -->
+
+                <button type="submit" class="cta-button">Login</button>
+            </form>
+
+            <!-- Additional options -->
+            <div class="extra-options">
+                <a href="{% url 'signup' %}" class="cta-button">Sign Up</a> <!-- Link to the signup page -->
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'amyres_webapp/js/amyres.js' %}"></script>
+    <footer>
+        <p>&copy; 2024 AMYRES : Research and Consultancy. All Rights Reserved.</p>
+        <p>Phone: +254-796-544-7066 | Email: info@amyres.co.ke</p>
+    </footer>
+</body>
+</html>
+

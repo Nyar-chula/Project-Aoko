@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AMYRES</title>
+    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Our Team</h1>
+               
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %} ">Home</a></li>
+                <li>
+                    <a href="#">About Us</a>
+                    <ul class="dropdown">
+                        <li><a href="{% url 'background' %} ">Background</a></li>
+                        <li><a href="{% url 'about' %} ">What We Do</a></li>
+                        <li><a href="{% url 'team' %} ">The Team</a></li>
+                </ul>
+                </li>
+                <li><a href="{% url 'products' %}">Products</a>
+                    <ul class="dropdown">
+                        <li><a href="#AGReFIND">AGReFIND</a></li>
+                        <li><a href="#Auditass">Auditass</a></li>
+                    </ul>
+                </li>
+                <li><a href="services.html">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="#field-trials">Field trials</a></li>
+                        <li><a href="#Feed-efficiency">FCE trials</a></li>
+                        <li><a href="#Agri-Data-Management">Data management</a></li> 
+                        <li><a href="#Market-research">Market research</a></li>
+                        <li><a href="#Literature-Reviewng">Literature reviewing</a></li>
+                        <li><a href="#app-development">App development</a></li>
+                        <li><a href="#FAQ">FAQ</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'news' %} ">News/Updates</a>
+                    <ul class="dropdown">
+                        <li><a href="#Recent-projects">Projects& activities</a></li>
+                        <li><a href="#Featured-service">Featured service</a></li>
+                        <li><a href="#Industry-insights">Industry insights</a></li> 
+                     
+                    </ul>
+                </li>
+                <li><a href="Contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Body Section -->
+    <div class="homepage">
+    <!-- Team section-->
+    <div class="row bottom-row">
+        <div class="team-member">
+            <img src="{% static 'amyres_webapp/Images/Aoko.jpg' %}" alt="Team member 1" srcset="">
+            <h3>Chief agriculturalist </h3>
+            <h3>Agribusiness expert</h3>
+            <h4><strong>Aoko Pauline</strong></h4>
+            <p>Aoko has over 8 years experience in agricultural research and consultancy.</p>
+            <p>Specializing in sustainable farming practices, agribusiness development, and rural extension services as a Senior agriculturalist and agribusiness expert. </p>
+        </div>
+
+        <div class="team-member">
+            <img src="{% static 'amyres_webapp/Images/Joseph.png' %}" alt="Team member 2" srcset="">
+            <h3>Data scientist</h3>
+            <h3>Lead data analyst</h3>
+            <h4><strong>Joseph Onyango</strong></h4>
+            <p> With a background in data analytics and machine learning, Joseph leads our research data processing, turning complex datasets into actionable insights that can be applied in the field.</p>
+        </div>
+
+        <div class="team-member">
+            <img src="{% static 'amyres_webapp/Images/Amisi.jpg' %}" alt="Team member 3" srcset="">
+            <h3>Statistician</h3>
+            <h4><strong>Amisi Pascal </strong></h4>
+            <p>Amisi oversees our research data programming and integration, ensuring our platform delivers accurate, region-specific data to farmers in a user-friendly format.</p>
+        </div>     
+    </div>
+    </div>
+    <script src="{% static 'amyres_webapp/js/amyres.js' %}"></script><!-- Link to external JavaScript file -->
+    <!-- Footer Section -->
+    <footer>
+       <p>&copy; 2024 AMYRES : Research and Consultancy. All Rights Reserved.</p>
+       <p>Phone: +254-796-544-7066 | Email: info@amyres.co.ke</p>
+    </footer>
+
+</body>
+</html>
